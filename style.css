@@ -1,25 +1,21 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #F4F4F4;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    color: #333;
 }
 
-/* The main calculator container */
 #housing-calculator {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 25px;
     max-width: 400px;
     width: 100%;
 }
-
-/* --- Form Elements --- */
 
 #housing-calculator h2 {
     margin-top: 0;
@@ -33,25 +29,15 @@ body {
 }
 
 #housing-calculator input[type="number"] {
-    width: calc(100% - 22px); /* Account for padding and border */
+    width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
 }
 
-/* Remove arrows from number input (optional) */
-#housing-calculator input[type="number"]::-webkit-outer-spin-button,
-#housing-calculator input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-#housing-calculator input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 #housing-calculator button {
-    background-color: #007bff;
+    background-color: #007BFF;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -60,14 +46,11 @@ body {
     cursor: pointer;
     width: 100%;
     margin-top: 20px;
-    transition: background-color 0.2s;
 }
 
 #housing-calculator button:hover {
-    background-color: #0056b3;
+    background-color: #0056B3;
 }
-
-/* --- Results Area --- */
 
 #housing-results {
     margin-top: 20px;
@@ -80,19 +63,13 @@ body {
     line-height: 1.5;
 }
 
-#housing-results .range-label {
-    font-weight: bold;
-    color: #555;
-    font-size: 0.95rem;
-}
-
 #housing-results .amount {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #2a8a2a; /* Green color for the resulting amount */
+    color: #2A8A2A;
 }
 
-#housing-results small {
-    color: #666;
-    font-style: italic;
+#housing-results .range-label {
+    font-weight: bold;
+    color: #555;
 }
