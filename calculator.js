@@ -1,7 +1,7 @@
-// Wait for the DOM to be fully loaded before adding event listeners
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     
-    // Get references to the HTML elements
+    // Get references to the elements
     const incomeInput = document.getElementById("gross-annual-income");
     const calcButton = document.getElementById("calculate-housing-btn");
     const resultsDiv = document.getElementById("housing-results");
@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // 2. Perform calculations based on the provided rules
         const monthlyIncome = annualIncome / 12;
-
+        
         // Rule 1: 28% Rule (Conservative)
         const conservativeLimit = monthlyIncome * 0.28;
-
+        
         // Rule 2: 32% GDS Rule (Upper Limit)
         const upperLimit = monthlyIncome * 0.32;
 
@@ -43,18 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // 4. Add event listener to the button
-    // Check if the button exists before adding listener
-    if (calcButton) {
-        calcButton.addEventListener("click", calculateHousing);
-    }
+    calcButton.addEventListener("click", calculateHousing);
 
-    // 5. Optional: Allow pressing 'Enter' to calculate
-    // Check if the input exists before adding listener
-    if (incomeInput) {
-        incomeInput.addEventListener("keyup", function(event) {
-            if (event.key === "Enter") {
-                calculateHousing();
-            }
-        });
-    }
+    // Optional: Allow pressing 'Enter' to calculate
+    incomeInput.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            calculateHousing();
+        }
+    });
 });
